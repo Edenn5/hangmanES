@@ -2,7 +2,7 @@
 // --------------------------------------------------------------
 
 // Array of Word Options (all lowercase)
-var wordsList = ["ronaldo", "messi", "neymar"];
+var wordsList = ["ronaldo", "messi", "neymar" , "aguero" , "bale" , "salah" , "mane" , "firmino" , "benzema"];
 
 // Solution will be held here
 var chosenWord = "";
@@ -80,7 +80,7 @@ function checkLetters(letter) {
     //This boolean will be toggled based on whether or not a user letter is found in the word
     var letterInWord = false;
 
-    // Chekck if a letter exists inside the array at all
+    // Check if a letter exists inside the array at all
     for (var i = 0; i < numBlanks; i++) {
 
         if (chosenWord[i] === letter) {
@@ -165,27 +165,27 @@ function roundComplete() {
 
         // Restart the game
         startGame();
-
-        }
     }
 
+}
 
-    // MAIN PROCESS (This is the code that controls what is actually run)
-    // ------------------------------------------------------------------------------
 
-    // Starts the game
-    startGame();
+// MAIN PROCESS (This is the code that controls what is actually run)
+// ---------------------------------------------------------------------------
 
-    // Then initiate the function for capturing key clicks
-    document.onKeyUp = function(event) {
+// Starts the Game
+startGame();
 
-        // Converts all the key clicks to lowercase letters
-        var letterGuessed = String.fromCharCode(event.keycode).toLowerCase();
+// Initiate the function for capturing key clicks
+document.onkeyup = function(event) {
 
-        // Run the code to check for correctness
-        checkLetter(letterGuessed);
+    // Converts all key clicks to lowercase letters
+    var letterGuessed = String.fromCharCode(event.keyCode).toLowerCase();
 
-        // Runs the code after each round is done
-        roundComplete;
+    // Runs the code to check for correctness
+    checkLetters(letterGuessed);
 
-    };
+    // Runs the code after each round is done
+    roundComplete();
+
+};

@@ -1,0 +1,19 @@
+body {
+    background-image: url(https://i.pinimg.com/originals/d8/18/68/d81868ecd8e2ea7d3e78165bdbaf13e3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: black;
+}
+
+.jumbotron {
+    color: red;
+    opacity: 0.9;
+}
+
+.container {
+    color: black;
+}
+
+h3, strong, span {
+    color: white;
+}
